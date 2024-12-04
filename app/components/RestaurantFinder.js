@@ -97,10 +97,10 @@ const RestaurantFinder = () => {
       places.forEach(place => {
         const popularity = Math.min(100, Math.round((place.rating * (place.user_ratings_total || 1)) / 50));
         const circle = new window.google.maps.Circle({
-          strokeColor: `rgb(${Math.round((popularity/100) * 255)}, 0, ${Math.round((1-popularity/100) * 255)})`,
+          strokeColor: 'rgb(0, 255, 0)',
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: `rgb(${Math.round((popularity/100) * 255)}, 0, ${Math.round((1-popularity/100) * 255)})`,
+          fillColor: 'rgb(0, 255, 0)',
           fillOpacity: 0.35,
           map: googleMapRef.current,
           center: place.geometry.location,
